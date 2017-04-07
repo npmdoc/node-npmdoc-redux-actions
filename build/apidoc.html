@@ -1,0 +1,812 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/acdlite/redux-actions"
+
+    >redux-actions (v2.0.1)</a>
+</h1>
+<h4>Flux Standard Action utlities for Redux</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions">module redux-actions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.combineActions">
+            function <span class="apidocSignatureSpan">redux-actions.</span>combineActions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.createAction">
+            function <span class="apidocSignatureSpan">redux-actions.</span>createAction
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.createActions">
+            function <span class="apidocSignatureSpan">redux-actions.</span>createActions
+            <span class="apidocSignatureSpan">(actionMap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.handleAction">
+            function <span class="apidocSignatureSpan">redux-actions.</span>handleAction
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.handleActions">
+            function <span class="apidocSignatureSpan">redux-actions.</span>handleActions
+            <span class="apidocSignatureSpan">(handlers, defaultState)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-actions.</span>arrayToObject</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-actions.</span>camelCase</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-actions.</span>namespaceActions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-actions.</span>ownKeys</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.arrayToObject">module redux-actions.arrayToObject</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.arrayToObject.default">
+            function <span class="apidocSignatureSpan">redux-actions.arrayToObject.</span>default
+            <span class="apidocSignatureSpan">(array, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.camelCase">module redux-actions.camelCase</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.camelCase.default">
+            function <span class="apidocSignatureSpan">redux-actions.camelCase.</span>default
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.combineActions">module redux-actions.combineActions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.combineActions.default">
+            function <span class="apidocSignatureSpan">redux-actions.combineActions.</span>default
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">redux-actions.combineActions.</span>ACTION_TYPE_DELIMITER</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.createAction">module redux-actions.createAction</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.createAction.default">
+            function <span class="apidocSignatureSpan">redux-actions.createAction.</span>default
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.createActions">module redux-actions.createActions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.createActions.default">
+            function <span class="apidocSignatureSpan">redux-actions.createActions.</span>default
+            <span class="apidocSignatureSpan">(actionMap)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.handleAction">module redux-actions.handleAction</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.handleAction.default">
+            function <span class="apidocSignatureSpan">redux-actions.handleAction.</span>default
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.handleActions">module redux-actions.handleActions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.handleActions.default">
+            function <span class="apidocSignatureSpan">redux-actions.handleActions.</span>default
+            <span class="apidocSignatureSpan">(handlers, defaultState)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.namespaceActions">module redux-actions.namespaceActions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.namespaceActions.flattenActionMap">
+            function <span class="apidocSignatureSpan">redux-actions.namespaceActions.</span>flattenActionMap
+            <span class="apidocSignatureSpan">(actionMap)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.namespaceActions.unflattenActionCreators">
+            function <span class="apidocSignatureSpan">redux-actions.namespaceActions.</span>unflattenActionCreators
+            <span class="apidocSignatureSpan">(flatActionCreators)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">redux-actions.namespaceActions.</span>defaultNamespace</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-actions.ownKeys">module redux-actions.ownKeys</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-actions.ownKeys.default">
+            function <span class="apidocSignatureSpan">redux-actions.ownKeys.</span>default
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions" id="apidoc.module.redux-actions">module redux-actions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.combineActions" id="apidoc.element.redux-actions.combineActions">
+        function <span class="apidocSignatureSpan">redux-actions.</span>combineActions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function combineActions() {
+  for (var _len = arguments.length, actionsTypes = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    actionsTypes[_key] = arguments[_key];
+  }
+
+  (0, _invariant2.default)(isValidActionTypes(actionsTypes), &#x27;Expected action types to be strings, symbols, or action creators&#x27;);
+  var combinedActionType = actionsTypes.map(_toString2.default).join(ACTION_TYPE_DELIMITER);
+  return { toString: function toString() {
+      return combinedActionType;
+    } };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.createAction" id="apidoc.element.redux-actions.createAction">
+        function <span class="apidocSignatureSpan">redux-actions.</span>createAction
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createAction(type) {
+  var payloadCreator = arguments.length &#x3c;= 1 || arguments[1] === undefined ? _identity2.default : arguments[1];
+  var metaCreator = arguments[2];
+
+  (0, _invariant2.default)((0, _isFunction2.default)(payloadCreator) || (0, _isNull2.default)(payloadCreator), &#x27;Expected payloadCreator
+ to be a function, undefined or null&#x27;);
+
+  var finalPayloadCreator = (0, _isNull2.default)(payloadCreator) ? _identity2.default : payloadCreator;
+
+  var actionCreator = function actionCreator() {
+    var hasError = (arguments.length &#x3c;= 0 ? undefined : arguments[0]) instanceof Error;
+
+    var action = {
+      type: type
+    };
+
+    var payload = hasError ? arguments.length &#x3c;= 0 ? undefined : arguments[0] : finalPayloadCreator.apply(undefined, arguments);
+    if (!(0, _isUndefined2.default)(payload)) {
+      action.payload = payload;
+    }
+
+    if (hasError || payload instanceof Error) {
+      // Handle FSA errors where the payload is an Error object. Set error.
+      action.error = true;
+    }
+
+    if ((0, _isFunction2.default)(metaCreator)) {
+      action.meta = metaCreator.apply(undefined, arguments);
+    }
+
+    return action;
+  };
+
+  actionCreator.toString = function () {
+    return type.toString();
+  };
+
+  return actionCreator;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.createActions" id="apidoc.element.redux-actions.createActions">
+        function <span class="apidocSignatureSpan">redux-actions.</span>createActions
+        <span class="apidocSignatureSpan">(actionMap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createActions(actionMap) {
+  for (var _len = arguments.length, identityActions = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+    identityActions[_key - 1] = arguments[_key];
+  }
+
+  function getFullOptions() {
+    var partialOptions = (0, _isPlainObject2.default)((0, _last2.default)(identityActions)) ? identityActions.pop() : {};
+    return (0, _defaults2.default)(partialOptions, { namespace: _namespaceActions.defaultNamespace });
+  }
+
+  var _getFullOptions = getFullOptions();
+
+  var namespace = _getFullOptions.namespace;
+
+  (0, _invariant2.default)(identityActions.every(_isString2.default) &#x26;&#x26; ((0, _isString2.default)(actionMap) || (0, _isPlainObject2
+.default)(actionMap)), &#x27;Expected optional object followed by string action types&#x27;);
+  if ((0, _isString2.default)(actionMap)) {
+    return actionCreatorsFromIdentityActions([actionMap].concat(identityActions));
+  }
+  return _extends({}, actionCreatorsFromActionMap(actionMap, namespace), actionCreatorsFromIdentityActions(identityActions));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.handleAction" id="apidoc.element.redux-actions.handleAction">
+        function <span class="apidocSignatureSpan">redux-actions.</span>handleAction
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleAction(type) {
+  var reducer = arguments.length &#x3c;= 1 || arguments[1] === undefined ? _identity2.default : arguments[1];
+  var defaultState = arguments[2];
+
+  var types = type.toString().split(_combineActions.ACTION_TYPE_DELIMITER);
+  (0, _invariant2.default)(!(0, _isUndefined2.default)(defaultState), &#x27;defaultState for reducer handling &#x27; + types.join(&#x27;, &#x27;) + &#x27;
+should be defined&#x27;);
+  (0, _invariant2.default)((0, _isFunction2.default)(reducer) || (0, _isPlainObject2.default)(reducer), &#x27;Expected reducer to be
+a function or object with next and throw reducers&#x27;);
+
+  var _ref = (0, _isFunction2.default)(reducer) ? [reducer, reducer] : [reducer.next, reducer.throw].map(function (aReducer) {
+    return (0, _isNil2.default)(aReducer) ? _identity2.default : aReducer;
+  });
+
+  var _ref2 = _slicedToArray(_ref, 2);
+
+  var nextReducer = _ref2[0];
+  var throwReducer = _ref2[1];
+
+
+  return function () {
+    var state = arguments.length &#x3c;= 0 || arguments[0] === undefined ? defaultState : arguments[0];
+    var action = arguments[1];
+    var actionType = action.type;
+
+    if (!actionType || !(0, _includes2.default)(types, actionType.toString())) {
+      return state;
+    }
+
+    return (action.error === true ? throwReducer : nextReducer)(state, action);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.handleActions" id="apidoc.element.redux-actions.handleActions">
+        function <span class="apidocSignatureSpan">redux-actions.</span>handleActions
+        <span class="apidocSignatureSpan">(handlers, defaultState)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleActions(handlers, defaultState) {
+  var reducers = (0, _ownKeys2.default)(handlers).map(function (type) {
+    return (0, _handleAction2.default)(type, handlers[type], defaultState);
+  });
+  var reducer = _reduceReducers2.default.apply(undefined, _toConsumableArray(reducers));
+  return function (state, action) {
+    return reducer(state, action);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.arrayToObject" id="apidoc.module.redux-actions.arrayToObject">module redux-actions.arrayToObject</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.arrayToObject.default" id="apidoc.element.redux-actions.arrayToObject.default">
+        function <span class="apidocSignatureSpan">redux-actions.arrayToObject.</span>default
+        <span class="apidocSignatureSpan">(array, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (array, callback) {
+  return array.reduce(function (partialObject, element) {
+    return callback(partialObject, element);
+  }, {});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.camelCase" id="apidoc.module.redux-actions.camelCase">module redux-actions.camelCase</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.camelCase.default" id="apidoc.element.redux-actions.camelCase.default">
+        function <span class="apidocSignatureSpan">redux-actions.camelCase.</span>default
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (type) {
+  return type.split(namespacer).map(camelCase).join(namespacer);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.combineActions" id="apidoc.module.redux-actions.combineActions">module redux-actions.combineActions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.combineActions.default" id="apidoc.element.redux-actions.combineActions.default">
+        function <span class="apidocSignatureSpan">redux-actions.combineActions.</span>default
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function combineActions() {
+  for (var _len = arguments.length, actionsTypes = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    actionsTypes[_key] = arguments[_key];
+  }
+
+  (0, _invariant2.default)(isValidActionTypes(actionsTypes), &#x27;Expected action types to be strings, symbols, or action creators&#x27;);
+  var combinedActionType = actionsTypes.map(_toString2.default).join(ACTION_TYPE_DELIMITER);
+  return { toString: function toString() {
+      return combinedActionType;
+    } };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.createAction" id="apidoc.module.redux-actions.createAction">module redux-actions.createAction</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.createAction.default" id="apidoc.element.redux-actions.createAction.default">
+        function <span class="apidocSignatureSpan">redux-actions.createAction.</span>default
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createAction(type) {
+  var payloadCreator = arguments.length &#x3c;= 1 || arguments[1] === undefined ? _identity2.default : arguments[1];
+  var metaCreator = arguments[2];
+
+  (0, _invariant2.default)((0, _isFunction2.default)(payloadCreator) || (0, _isNull2.default)(payloadCreator), &#x27;Expected payloadCreator
+ to be a function, undefined or null&#x27;);
+
+  var finalPayloadCreator = (0, _isNull2.default)(payloadCreator) ? _identity2.default : payloadCreator;
+
+  var actionCreator = function actionCreator() {
+    var hasError = (arguments.length &#x3c;= 0 ? undefined : arguments[0]) instanceof Error;
+
+    var action = {
+      type: type
+    };
+
+    var payload = hasError ? arguments.length &#x3c;= 0 ? undefined : arguments[0] : finalPayloadCreator.apply(undefined, arguments);
+    if (!(0, _isUndefined2.default)(payload)) {
+      action.payload = payload;
+    }
+
+    if (hasError || payload instanceof Error) {
+      // Handle FSA errors where the payload is an Error object. Set error.
+      action.error = true;
+    }
+
+    if ((0, _isFunction2.default)(metaCreator)) {
+      action.meta = metaCreator.apply(undefined, arguments);
+    }
+
+    return action;
+  };
+
+  actionCreator.toString = function () {
+    return type.toString();
+  };
+
+  return actionCreator;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.createActions" id="apidoc.module.redux-actions.createActions">module redux-actions.createActions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.createActions.default" id="apidoc.element.redux-actions.createActions.default">
+        function <span class="apidocSignatureSpan">redux-actions.createActions.</span>default
+        <span class="apidocSignatureSpan">(actionMap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createActions(actionMap) {
+  for (var _len = arguments.length, identityActions = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+    identityActions[_key - 1] = arguments[_key];
+  }
+
+  function getFullOptions() {
+    var partialOptions = (0, _isPlainObject2.default)((0, _last2.default)(identityActions)) ? identityActions.pop() : {};
+    return (0, _defaults2.default)(partialOptions, { namespace: _namespaceActions.defaultNamespace });
+  }
+
+  var _getFullOptions = getFullOptions();
+
+  var namespace = _getFullOptions.namespace;
+
+  (0, _invariant2.default)(identityActions.every(_isString2.default) &#x26;&#x26; ((0, _isString2.default)(actionMap) || (0, _isPlainObject2
+.default)(actionMap)), &#x27;Expected optional object followed by string action types&#x27;);
+  if ((0, _isString2.default)(actionMap)) {
+    return actionCreatorsFromIdentityActions([actionMap].concat(identityActions));
+  }
+  return _extends({}, actionCreatorsFromActionMap(actionMap, namespace), actionCreatorsFromIdentityActions(identityActions));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.handleAction" id="apidoc.module.redux-actions.handleAction">module redux-actions.handleAction</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.handleAction.default" id="apidoc.element.redux-actions.handleAction.default">
+        function <span class="apidocSignatureSpan">redux-actions.handleAction.</span>default
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleAction(type) {
+  var reducer = arguments.length &#x3c;= 1 || arguments[1] === undefined ? _identity2.default : arguments[1];
+  var defaultState = arguments[2];
+
+  var types = type.toString().split(_combineActions.ACTION_TYPE_DELIMITER);
+  (0, _invariant2.default)(!(0, _isUndefined2.default)(defaultState), &#x27;defaultState for reducer handling &#x27; + types.join(&#x27;, &#x27;) + &#x27;
+should be defined&#x27;);
+  (0, _invariant2.default)((0, _isFunction2.default)(reducer) || (0, _isPlainObject2.default)(reducer), &#x27;Expected reducer to be
+a function or object with next and throw reducers&#x27;);
+
+  var _ref = (0, _isFunction2.default)(reducer) ? [reducer, reducer] : [reducer.next, reducer.throw].map(function (aReducer) {
+    return (0, _isNil2.default)(aReducer) ? _identity2.default : aReducer;
+  });
+
+  var _ref2 = _slicedToArray(_ref, 2);
+
+  var nextReducer = _ref2[0];
+  var throwReducer = _ref2[1];
+
+
+  return function () {
+    var state = arguments.length &#x3c;= 0 || arguments[0] === undefined ? defaultState : arguments[0];
+    var action = arguments[1];
+    var actionType = action.type;
+
+    if (!actionType || !(0, _includes2.default)(types, actionType.toString())) {
+      return state;
+    }
+
+    return (action.error === true ? throwReducer : nextReducer)(state, action);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.handleActions" id="apidoc.module.redux-actions.handleActions">module redux-actions.handleActions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.handleActions.default" id="apidoc.element.redux-actions.handleActions.default">
+        function <span class="apidocSignatureSpan">redux-actions.handleActions.</span>default
+        <span class="apidocSignatureSpan">(handlers, defaultState)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function handleActions(handlers, defaultState) {
+  var reducers = (0, _ownKeys2.default)(handlers).map(function (type) {
+    return (0, _handleAction2.default)(type, handlers[type], defaultState);
+  });
+  var reducer = _reduceReducers2.default.apply(undefined, _toConsumableArray(reducers));
+  return function (state, action) {
+    return reducer(state, action);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.namespaceActions" id="apidoc.module.redux-actions.namespaceActions">module redux-actions.namespaceActions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.namespaceActions.flattenActionMap" id="apidoc.element.redux-actions.namespaceActions.flattenActionMap">
+        function <span class="apidocSignatureSpan">redux-actions.namespaceActions.</span>flattenActionMap
+        <span class="apidocSignatureSpan">(actionMap)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function flattenActionMap(actionMap) {
+  var namespace = arguments.length &#x3c;= 1 || arguments[1] === undefined ? defaultNamespace : arguments[1];
+  var partialFlatActionMap = arguments.length &#x3c;= 2 || arguments[2] === undefined ? {} : arguments[2];
+  var partialFlatActionType = arguments.length &#x3c;= 3 || arguments[3] === undefined ? &#x27;&#x27; : arguments[3];
+
+  function connectNamespace(type) {
+    return partialFlatActionType ? &#x27;&#x27; + partialFlatActionType + namespace + type : type;
+  }
+
+  Object.getOwnPropertyNames(actionMap).forEach(function (type) {
+    var nextNamespace = connectNamespace(type);
+    var actionMapValue = actionMap[type];
+
+    if (!(0, _isPlainObject2.default)(actionMapValue)) {
+      partialFlatActionMap[nextNamespace] = actionMap[type];
+    } else {
+      flattenActionMap(actionMap[type], namespace, partialFlatActionMap, nextNamespace);
+    }
+  });
+  return partialFlatActionMap;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.namespaceActions.unflattenActionCreators" id="apidoc.element.redux-actions.namespaceActions.unflattenActionCreators">
+        function <span class="apidocSignatureSpan">redux-actions.namespaceActions.</span>unflattenActionCreators
+        <span class="apidocSignatureSpan">(flatActionCreators)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unflattenActionCreators(flatActionCreators) {
+  var namespace = arguments.length &#x3c;= 1 || arguments[1] === undefined ? defaultNamespace : arguments[1];
+
+  function unflatten(flatActionType) {
+    var partialNestedActionCreators = arguments.length &#x3c;= 1 || arguments[1] === undefined ? {} : arguments[1];
+    var partialFlatActionTypePath = arguments.length &#x3c;= 2 || arguments[2] === undefined ? [] : arguments[2];
+
+    var nextNamespace = (0, _camelCase2.default)(partialFlatActionTypePath.shift());
+    if (partialFlatActionTypePath.length) {
+      if (!partialNestedActionCreators[nextNamespace]) {
+        partialNestedActionCreators[nextNamespace] = {};
+      }
+      unflatten(flatActionType, partialNestedActionCreators[nextNamespace], partialFlatActionTypePath);
+    } else {
+      partialNestedActionCreators[nextNamespace] = flatActionCreators[flatActionType];
+    }
+  }
+
+  var partialNestedActionCreators = {};
+  Object.getOwnPropertyNames(flatActionCreators).forEach(function (type) {
+    return unflatten(type, partialNestedActionCreators, type.split(namespace));
+  });
+  return partialNestedActionCreators;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-actions.ownKeys" id="apidoc.module.redux-actions.ownKeys">module redux-actions.ownKeys</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-actions.ownKeys.default" id="apidoc.element.redux-actions.ownKeys.default">
+        function <span class="apidocSignatureSpan">redux-actions.ownKeys.</span>default
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ownKeys(object) {
+  if (typeof Reflect !== &#x27;undefined&#x27; &#x26;&#x26; typeof Reflect.ownKeys === &#x27;function&#x27;) {
+    return Reflect.ownKeys(object);
+  }
+
+  var keys = Object.getOwnPropertyNames(object);
+
+  if (typeof Object.getOwnPropertySymbols === &#x27;function&#x27;) {
+    keys = keys.concat(Object.getOwnPropertySymbols(object));
+  }
+
+  return keys;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
