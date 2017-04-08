@@ -1,31 +1,31 @@
 <svg height="446" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="446" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-08 10:03:11 +0000   156213 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-08 10:03:11 +0000     1079 bytes  LICENSE</tspan>
-<tspan x="10" y="58">  2.  2017-04-08 10:03:11 +0000    10971 bytes  README.md</tspan>
-<tspan x="10" y="74">  3.  2017-04-08 10:03:11 +0000    83375 bytes  dist/redux-actions.js</tspan>
-<tspan x="10" y="90">  4.  2017-04-08 10:03:11 +0000    21067 bytes  dist/redux-actions.min.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-08 10:03:11 +0000      161 bytes  es/arrayToObject.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-08 10:03:11 +0000     2498 bytes  es/camelCase.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-08 10:03:11 +0000      979 bytes  es/combineActions.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-08 10:03:11 +0000     1365 bytes  es/createAction.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-08 10:03:11 +0000     4611 bytes  es/createActions.js</tspan>
-<tspan x="10" y="186"> 10.  2017-04-08 10:03:11 +0000     2147 bytes  es/handleAction.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-08 10:03:11 +0000      664 bytes  es/handleActions.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-08 10:03:11 +0000      308 bytes  es/index.js</tspan>
-<tspan x="10" y="234"> 13.  2017-04-08 10:03:11 +0000     2190 bytes  es/namespaceActions.js</tspan>
-<tspan x="10" y="250"> 14.  2017-04-08 10:03:11 +0000      357 bytes  es/ownKeys.js</tspan>
-<tspan x="10" y="266"> 15.  2017-04-08 10:03:11 +0000      243 bytes  lib/arrayToObject.js</tspan>
-<tspan x="10" y="282"> 16.  2017-04-08 10:03:11 +0000     2579 bytes  lib/camelCase.js</tspan>
-<tspan x="10" y="298"> 17.  2017-04-08 10:03:11 +0000     1680 bytes  lib/combineActions.js</tspan>
-<tspan x="10" y="314"> 18.  2017-04-08 10:03:11 +0000     1967 bytes  lib/createAction.js</tspan>
-<tspan x="10" y="330"> 19.  2017-04-08 10:03:11 +0000     5803 bytes  lib/createActions.js</tspan>
-<tspan x="10" y="346"> 20.  2017-04-08 10:03:11 +0000     2914 bytes  lib/handleAction.js</tspan>
-<tspan x="10" y="362"> 21.  2017-04-08 10:03:11 +0000     1091 bytes  lib/handleActions.js</tspan>
-<tspan x="10" y="378"> 22.  2017-04-08 10:03:11 +0000     1111 bytes  lib/index.js</tspan>
-<tspan x="10" y="394"> 23.  2017-04-08 10:03:11 +0000     2701 bytes  lib/namespaceActions.js</tspan>
-<tspan x="10" y="410"> 24.  2017-04-08 10:03:11 +0000      449 bytes  lib/ownKeys.js</tspan>
-<tspan x="10" y="426"> 25.  2017-04-08 10:03:11 +0000     3903 bytes  package.json</tspan>
+<tspan x="10" y="26">  0.  2017-04-08 10:04:38 +0000   156213 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-08 10:04:38 +0000     1079 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-08 10:04:38 +0000    10971 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-08 10:04:38 +0000    83375 bytes  dist/redux-actions.js</tspan>
+<tspan x="10" y="90">  4.  2017-04-08 10:04:38 +0000    21067 bytes  dist/redux-actions.min.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-08 10:04:38 +0000      161 bytes  es/arrayToObject.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-08 10:04:38 +0000     2498 bytes  es/camelCase.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-08 10:04:38 +0000      979 bytes  es/combineActions.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-08 10:04:38 +0000     1365 bytes  es/createAction.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-08 10:04:38 +0000     4611 bytes  es/createActions.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-08 10:04:38 +0000     2147 bytes  es/handleAction.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-08 10:04:38 +0000      664 bytes  es/handleActions.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-08 10:04:38 +0000      308 bytes  es/index.js</tspan>
+<tspan x="10" y="234"> 13.  2017-04-08 10:04:38 +0000     2190 bytes  es/namespaceActions.js</tspan>
+<tspan x="10" y="250"> 14.  2017-04-08 10:04:38 +0000      357 bytes  es/ownKeys.js</tspan>
+<tspan x="10" y="266"> 15.  2017-04-08 10:04:38 +0000      243 bytes  lib/arrayToObject.js</tspan>
+<tspan x="10" y="282"> 16.  2017-04-08 10:04:38 +0000     2579 bytes  lib/camelCase.js</tspan>
+<tspan x="10" y="298"> 17.  2017-04-08 10:04:38 +0000     1680 bytes  lib/combineActions.js</tspan>
+<tspan x="10" y="314"> 18.  2017-04-08 10:04:38 +0000     1967 bytes  lib/createAction.js</tspan>
+<tspan x="10" y="330"> 19.  2017-04-08 10:04:38 +0000     5803 bytes  lib/createActions.js</tspan>
+<tspan x="10" y="346"> 20.  2017-04-08 10:04:38 +0000     2914 bytes  lib/handleAction.js</tspan>
+<tspan x="10" y="362"> 21.  2017-04-08 10:04:38 +0000     1091 bytes  lib/handleActions.js</tspan>
+<tspan x="10" y="378"> 22.  2017-04-08 10:04:38 +0000     1111 bytes  lib/index.js</tspan>
+<tspan x="10" y="394"> 23.  2017-04-08 10:04:38 +0000     2701 bytes  lib/namespaceActions.js</tspan>
+<tspan x="10" y="410"> 24.  2017-04-08 10:04:38 +0000      449 bytes  lib/ownKeys.js</tspan>
+<tspan x="10" y="426"> 25.  2017-04-08 10:04:38 +0000     3903 bytes  package.json</tspan>
 </text>
 </svg>
