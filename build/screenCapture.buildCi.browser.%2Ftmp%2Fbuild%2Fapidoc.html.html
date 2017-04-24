@@ -47,7 +47,7 @@
 }
 </style>
 <h1>api documentation for
-    <a href="https://github.com/acdlite/redux-actions">redux-actions (v2.0.1)</a>
+    <a href="https://github.com/acdlite/redux-actions">redux-actions (v2.0.2)</a>
 </h1>
 <h4>Flux Standard Action utlities for Redux</h4>
 <div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
@@ -428,11 +428,14 @@ a function or object with next and throw reducers');
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function handleActions(handlers, defaultState) {
+  (0, _invariant2.default)((0, _isPlainObject2.default)(handlers), 'Expected handlers to be an plain object.');
   var reducers = (0, _ownKeys2.default)(handlers).map(function (type) {
     return (0, _handleAction2.default)(type, handlers[type], defaultState);
   });
   var reducer = _reduceReducers2.default.apply(undefined, _toConsumableArray(reducers));
-  return function (state, action) {
+  return function () {
+    var state = arguments.length &lt;= 0 || arguments[0] === undefined ? defaultState : arguments[0];
+    var action = arguments[1];
     return reducer(state, action);
   };
 }</pre></li>
@@ -677,11 +680,14 @@ a function or object with next and throw reducers');
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function handleActions(handlers, defaultState) {
+  (0, _invariant2.default)((0, _isPlainObject2.default)(handlers), 'Expected handlers to be an plain object.');
   var reducers = (0, _ownKeys2.default)(handlers).map(function (type) {
     return (0, _handleAction2.default)(type, handlers[type], defaultState);
   });
   var reducer = _reduceReducers2.default.apply(undefined, _toConsumableArray(reducers));
-  return function (state, action) {
+  return function () {
+    var state = arguments.length &lt;= 0 || arguments[0] === undefined ? defaultState : arguments[0];
+    var action = arguments[1];
     return reducer(state, action);
   };
 }</pre></li>
@@ -753,11 +759,11 @@ a function or object with next and throw reducers');
     }
   }
 
-  var partialNestedActionCreators = {};
+  var nestedActionCreators = {};
   Object.getOwnPropertyNames(flatActionCreators).forEach(function (type) {
-    return unflatten(type, partialNestedActionCreators, type.split(namespace));
+    return unflatten(type, nestedActionCreators, type.split(namespace));
   });
-  return partialNestedActionCreators;
+  return nestedActionCreators;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
